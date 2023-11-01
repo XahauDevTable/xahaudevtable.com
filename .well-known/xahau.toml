@@ -1,0 +1,18 @@
+[METADATA]
+modified = 2023-10-13T17:56:00.000Z
+
+[[PRINCIPALS]]
+name = "Xahau Dev Table"
+email = "xahaudevtable@gmail.com"
+
+[[ACCOUNTS]]
+address = "r4FRPZbLnyuVeGiSi1Ap6uaaPvPXYZh1XN"
+network = "main"
+
+[[VALIDATORS]]
+public_key = "nHUzXFEQwBkqHWp71E23fY9QKvEGQqVncJfm8fPxn4bRBYQ3Eee3"
+owner_country = "SE"
+server_country = "SE"
+attestation = "59D7E53FF5E2287C101B8EFA1D68375643F6480B481C99E86A67DC50004A6EE89339FD8F9C796F8F9462A5111B55D83C57879928D27698CD451E6BA4F3C5E30D"
+network = "main"
+unl = ["https://vl.xahau.org"]

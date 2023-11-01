@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="js-focus-visible dark" style="color-scheme: dark;">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="./res/img/xahau-icon.svg" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Xahau Dev Table</title>
+        <link href="./res/tailwind.css?v3" rel="stylesheet" />
+        <link href="./res/css2.css?v3" rel="stylesheet" />
+        <link href="./res/css3.css?v3" rel="stylesheet" />
+        <style>
+        :root {
+          --nextra-primary-hue: 212deg;
+          --nextra-navbar-height: 4rem;
+          --nextra-menu-height: 3.75rem;
+          --nextra-banner-height: 2.5rem;
+        }
+        .dark {
+          --nextra-primary-hue: 204deg;
+        }
+        </style>
+        <script>
+            !(function () {
+                try {
+                    var d = document.documentElement,
+                        c = d.classList;
+                    c.remove("light", "dark");
+                    var e = localStorage.getItem("theme");
+                    if ("system" === e || (!e && false)) {
+                        var t = "(prefers-color-scheme: dark)",
+                            m = window.matchMedia(t);
+                        if (m.media !== t || m.matches) {
+                            d.style.colorScheme = "dark";
+                            c.add("dark");
+                        } else {
+                            d.style.colorScheme = "light";
+                            c.add("light");
+                        }
+                    } else if (e) {
+                        c.add(e || "");
+                    } else {
+                        c.add("dark");
+                    }
+                    if (e === "light" || e === "dark" || !e) d.style.colorScheme = e || "dark";
+                } catch (e) {}
+            })();
+        </script>
+    </head>
+    <body >
+        <div class="app" dir="ltr">
+            <div class="nextra-nav-container nx-sticky nx-top-0 nx-z-20 nx-w-full nx-bg-transparent print:nx-hidden">
+                <div
+                    class="nextra-nav-container-blur nx-pointer-events-none nx-absolute nx-z-[-1] nx-h-full nx-w-full nx-bg-white dark:nx-bg-dark nx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] dark:nx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:nx-shadow-[0_0_0_1px_#000] contrast-more:dark:nx-shadow-[0_0_0_1px_#fff]"
+                ></div>
+                <nav class="nx-mx-auto nx-flex nx-h-[var(--nextra-navbar-height)] nx-max-w-[90rem] nx-items-center nx-justify-end nx-gap-2 nx-pl-[max(env(safe-area-inset-left),1.5rem)] nx-pr-[max(env(safe-area-inset-right),1.5rem)]">
+                    <div class="nx-flex nx-items-center ltr:nx-mr-auto rtl:nx-ml-auto">
+                        <div class="block relative">
+                            <button class="flex">
+                              <img src="./res/img/xahau-icon-yellow.svg" height="26" width="26" class="light:hidden" />
+                              <!--<img src="./res/img/xahau-icon-darkblue.svg" height="26" width="26" class="dark:hidden"/>-->
+                            </button>
+                        </div>
+                        <svg class="dark:text-[#333] text-[#eaeaea] ml-2 mr-1" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16.88 3.549L7.12 20.451"></path></svg>
+                        <a class="hover:opacity-75" title="Home" href="/">
+                          <img src="./res/img/xdt.png" height="20" style="height:20px"/>
+                          <!--<img src="./res/img/xdt-dark.png" height="20" style="height:20px" class="dark:hidden"/>-->
+                        </a>
+                        <div class="header-logo_siteSwitcher__ACJqb">
+                            <div class="relative flex items-center justify-between p-2 text-xl group">
+                                <span
+                                    class="flex h-[34px] w-[100px] flex-shrink-0 items-center rounded-[8px] border border-[#dedfde] dark:border-[#333333] p-1 duration-300 ease-in-out after:h-[24px] after:w-[44px] after:rounded-md dark:after:bg-[#333333] after:shadow-sm after:duration-300 after:border dark:after:border-[#333333] after:border-[#666666]/100 after:bg-gradient-to-b after:from-[#3286F1] after:to-[#C33AC3] after:opacity-20 dark:after:opacity-100 dark:after:bg-none indeterminate:after:hidden after:hidden"
+                                ></span>
+                                <span class="z-50 absolute p-1 text-sm flex justify-between text-center w-[100px] text-[#666666] dark:text-[#888888]">
+                                  
+                                    <span class="py-1 transition-colors duration-300 inline-block w-[100px]">8 Developers</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a
+                        class="nx-text-sm contrast-more:nx-text-gray-700 contrast-more:dark:nx-text-gray-100 nx-relative -nx-ml-2 nx-hidden nx-whitespace-nowrap nx-p-2 md:nx-inline-block nx-text-gray-600 hover:nx-text-gray-800 dark:nx-text-gray-400 dark:hover:nx-text-gray-200"
+                        aria-current="false"
+                        href="/#governance">
+                        <span class="nx-absolute nx-inset-x-0 nx-text-center">Governance</span><span class="nx-invisible nx-font-medium">Governance</span>
+                    </a>
+                    <a
+                        class="nx-text-sm contrast-more:nx-text-gray-700 contrast-more:dark:nx-text-gray-100 nx-relative -nx-ml-2 nx-hidden nx-whitespace-nowrap nx-p-2 md:nx-inline-block nx-text-gray-600 hover:nx-text-gray-800 dark:nx-text-gray-400 dark:hover:nx-text-gray-200"
+                        aria-current="false"
+                        href="#apply" onclick="alert('Applications are currently closed, please check back later.');return false;">
+                        <span class="nx-absolute nx-inset-x-0 nx-text-center">Apply</span><span class="nx-invisible nx-font-medium">Apply</span>
+                    </a>-->
+                    
+                    <!--<div class="nextra-search nx-relative md:nx-w-64 nx-hidden md:nx-inline-block mx-min-w-[200px]">
+                        <div class="nx-relative nx-flex nx-items-center nx-text-gray-900 contrast-more:nx-text-gray-800 dark:nx-text-gray-300 contrast-more:dark:nx-text-gray-300">
+                            <input
+                                spellcheck="false"
+                                class="nx-block nx-w-full nx-appearance-none nx-rounded-lg nx-px-3 nx-py-2 nx-transition-colors nx-text-base nx-leading-tight md:nx-text-sm nx-bg-black/[.05] dark:nx-bg-gray-50/10 focus:nx-bg-white dark:focus:nx-bg-dark placeholder:nx-text-gray-500 dark:placeholder:nx-text-gray-400 contrast-more:nx-border contrast-more:nx-border-current"
+                                type="search"
+                                placeholder="Search…"
+                                value=""
+                            />
+                            <kbd
+                                class="nx-absolute nx-my-1.5 nx-select-none ltr:nx-right-1.5 rtl:nx-left-1.5 nx-h-5 nx-rounded nx-bg-white nx-px-1.5 nx-font-mono nx-text-[10px] nx-font-medium nx-text-gray-500 nx-border dark:nx-border-gray-100/20 dark:nx-bg-dark/50 contrast-more:nx-border-current contrast-more:nx-text-current contrast-more:dark:nx-border-current nx-items-center nx-gap-1 nx-pointer-events-none nx-hidden sm:nx-flex nx-opacity-100"
+                            >
+                                CTRL K
+                            </kbd>
+                        </div>
+                    </div>-->
+                    <a class="hidden p-2 text-current sm:flex hover:opacity-75" href="https://github.com/xahaudevtable" rel="noreferrer" target="_blank" title="Xahau Dev Table GitHub repo">
+                        <svg width="24" height="24" fill="currentColor" viewBox="3 3 18 18">
+                            <title>GitHub</title>
+                            <path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path>
+                        </svg>
+                    </a>
+                    <a class="hidden p-2 text-current sm:flex hover:opacity-75" href="https://x.com/xahaudevtable" rel="noreferrer" target="_blank" title="Xahau Dev table on X">
+                      <img src="./res/img/x.svg" height="20" style="height:20px"/>
+                    </a>
+                    <button type="button" aria-label="Menu" class="nextra-hamburger -nx-mr-2 nx-rounded nx-p-2 active:nx-bg-gray-400/20 md:nx-hidden" id="menu">
+                        <svg fill="none" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" class="">
+                            <g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path></g>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+                            <g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path></g>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+
+<!-- MOBILE MENU -->
+<div class="nx-mx-auto nx-flex">
+  <div class="motion-reduce:nx-transition-none [transition:background-color_1.5s_ease] nx-bg-transparent" id="mm-div"></div>
+  <aside id="mm-aside" class="nextra-sidebar-container nx-flex nx-flex-col md:nx-top-16 md:nx-shrink-0 motion-reduce:nx-transform-none nx-transform-gpu nx-transition-all nx-ease-in-out print:nx-hidden md:nx-w-64 md:nx-hidden max-md:[transform:translate3d(0,-100%,0)]">
+    <div class="nx-overflow-y-auto nx-overflow-x-hidden nx-p-4 nx-grow md:nx-h-[calc(100vh-var(--nextra-navbar-height)-var(--nextra-menu-height))] nextra-scrollbar">
+      <ul class="nx-flex nx-flex-col nx-gap-1 nextra-menu-mobile md:nx-hidden">
+        
+        <li class="nx-flex nx-flex-col nx-gap-1">
+          <a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50"
+          href="https://github.com/xahaudevtable">Github
+          </a>
+        </li>
+        <li class="nx-flex nx-flex-col nx-gap-1">
+          <a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50"
+          href="https://x.com/xahaudevtable">Twitter / X
+          </a>
+        </li>
+        <li class="nx-flex nx-flex-col nx-gap-1">
+          <a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50"
+          href="mailto&#58;%7&#56;a&#104;a%7&#53;de%7&#54;t%61%62l&#101;%40%6&#55;ma&#105;%6C&#46;%63%6F&#109;">Email Us
+          </a>
+        </li>
+
+        
+
+      </ul>
+    </div>
+    <div class="nx-sticky nx-bottom-0 nx-bg-white dark:nx-bg-dark nx-mx-4 nx-py-4 nx-shadow-[0_-12px_16px_#fff] nx-flex nx-items-center nx-gap-2 dark:nx-border-neutral-800 dark:nx-shadow-[0_-12px_16px_#111] contrast-more:nx-border-neutral-400 contrast-more:nx-shadow-none contrast-more:dark:nx-shadow-none nx-border-t" data-toggle-animation="off">
+      <div class="nx-grow nx-flex nx-flex-col">
+        <!--<button title="Change theme" class="nx-h-7 nx-rounded-md nx-px-2 nx-text-left nx-text-xs nx-font-medium nx-text-gray-600 nx-transition-colors dark:nx-text-gray-400 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50" id="headlessui-listbox-button-:R2njd6:" type="button" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="">
+          <div class="nx-flex nx-items-center nx-gap-2 nx-capitalize">
+            <svg fill="none" viewBox="2 2 20 20" width="12" height="12" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="currentColor" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            <span class="">Dark</span>
+          </div>
+        </button>-->
+        <span class="dark:nx-text-gray-400 nx-text-gray-600 nx-text-xs">Hi!</span>
+      </div>
+      
+      <button title="Hide sidebar" class="max-md:nx-hidden nx-h-7 nx-rounded-md nx-transition-colors nx-text-gray-600 dark:nx-text-gray-400 nx-px-2 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50"><svg height="12" width="12" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M4.177 7.823l2.396-2.396A.25.25 0 017 5.604v4.792a.25.25 0 01-.427.177L4.177 8.177a.25.25 0 010-.354z" class=""></path><path fill-rule="evenodd" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25H9.5v-13H1.75zm12.5 13H11v-13h3.25a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25z"></path></svg></button>
+    </div>
+  </aside>
+  
+  <div id="reach-skip-nav"></div>
+  
+  <div class="nx-w-full nx-break-words">
+    <main class="relative flex flex-col items-center justify-center w-full h-full  overflow-hidden [--geist-foreground:#fff] dark:[--geist-foreground:#000] [--gradient-stop-1:0px] [--gradient-stop-2:120px] sm:[--gradient-stop-1:0px] sm:[--gradient-stop-2:120px]">
+      <!--<div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div class="z-[-1] absolute w-full h-full [--gradient-stop-1:60%] [--gradient-stop-2:85%] lg:[--gradient-stop-1:50%] lg:[--gradient-stop-2:90%] [--gradient-color-1=rgba(0,0,0,1)] [--gradient-color-2=rgba(0,0,0,0.8)] [--gradient-color-3=rgba(0,0,0,0)] dark:[--gradient-color-1=rgba(255,255,255,1)] dark:[--gradient-color-2=rgba(255,255,255,0.8)] dark:[--gradient-color-3=rgba(255,255,255,0)]" style="background:linear-gradient(180deg, var(--gradient-color-1) 0%, var(--gradient-color-2) var(--gradient-stop-1), var(--gradient-color-3) var(--gradient-stop-2), 100% transparent)"></div>
+        <span class="landing_leftLights__L8NEZ opacity-50 dark:opacity-100"></span>
+        <span class="landing_rightLights__agcl8 opacity-50 dark:opacity-100"></span>
+        <span class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t dark:from-black from-white to-transparent"></span>
+        <span class="bg-gradient-to-b dark:from-black from-white to-transparent absolute top-[20vh] left-0 w-full h-[50vh]"></span>
+        <div class="![perspective:1000px] sm:![perspective:1000px] md:![perspective:1000px] lg:![perspective:1000px] turbohero-background_container__Vu5AA">
+          <div class="z-[100] absolute inset-0 [--gradient-stop-1:0px] [--gradient-stop-2:50%]" style="background:linear-gradient(to top, rgba(0,0,0,0) 0px, var(--geist-foreground) 50%)"></div>
+          <div style="transform:rotateX(75deg);position:absolute;top:0;bottom:0;left:0;right:0">
+            <div class="turbohero-background_lines__UYrFE"></div>
+          </div>
+        </div>
+      </div>-->
+      <div id="xdt-canvas-w" class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <canvas id="xdt-canvas"></canvas>
+      </div>
+     
+      <div class="z-10 flex flex-col items-center justify-center w-full h-full" style="opacity: 1; transform: none;">
+        <h1 class="mt-12 lg:!mt-20 mx-6 w-[300px] md:!w-full font-extrabold text-5xl lg:text-6xl  leading-tight xl:leading-snug text-center pb-4 bg-clip-text text-transparent bg-gradient-to-b from-black/80 to-black dark:from-white dark:to-[#AAAAAA]">Xahau Dev Table</h1>
+        <p class="mx-6 mb-4 text-xl max-h-[112px] md:max-h-[96px] w-[315px] md:w-[660px] md:text-2xl font-space-grotesk text-center text-[#666666] dark:text-[#888888]">
+          A group of independent, XRPL tech related companies and individuals participating in the 
+          <a href="https://xahau.network" target="_blank" class="transition-colors duration-300 cursor-pointer text-white hover:text-black dark:hover:text-white">@XahauNetwork</a> Governance Game as an L2 table.
+        </p>
+      </div>
+      <div class="flex w-full container items-center justify-center gap-6 px-6 sm:mx-0 mt-8 md:!mt-14 lg:!mt-15 md:mb-0 flex-col lg:!flex-row z-10 lg:!translate-y-0">
+        <!--Left box-->
+        <div style="opacity: 1; transform: none;" class="box">
+          <span class="landing_counter-border__iOYlh w-[calc(100%_-_0px)] h-[304]px sm:!w-[488px] sm:h-[352px]">
+            <i aria-hidden="true" style="opacity: 0;"></i>
+            <div class="relative w-full h-full max-w-full !pb-12 pt-8 md:!pb-4 md:!pt-4 p-3 rounded-xl overflow-hidden flex flex-col items-center justify-center border border-[rgba(255,255,255,0.05)] turborepoCardBg">
+              <div class="flex items-center justify-center flex-1 mb-7 md:mb-0">
+                <div class="relative w-24 h-24">
+                  <div class="pointer-events-none absolute w-[261px] h-[261px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-[#FF3358] to-[#FF4FD8] mix-blend-normal opacity-5 dark:opacity-[0.15] blur-[60px]"></div>
+                  <div class="contents dark:hidden">
+                    <img alt="Validator Icon" loading="lazy" width="120" height="120" decoding="async" data-nimg="1" class="absolute w-[84px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="color:transparent" src="./res/img/server-dark.svg">
+                  </div>
+                  <div class="dark:contents hidden"><img alt="Validator Logo" loading="lazy" width="120" height="120" decoding="async" data-nimg="1" class="hidden dark:block absolute w-[84px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="color:transparent" src="./res/img/server.svg"></div>
+                </div>
+              </div>
+              <div class="flex flex-col items-center flex-1">
+                <div class="absolute top-3 left-3">
+                  <div class="font-mono font-bold text-xs text-black/50 dark:text-white/50  px-[6px] py-[3.25px] tracking-[-0.01em] rounded-[6px] uppercase flex justify-center items-center bg-black/5 dark:bg-white/[0.15] border border-black/[0.1] dark:border-white/[0.1]">Validator</div>
+                </div>
+                <div class="text-xs opacity-50 dark:opacity-70" style="width:100%">Validator Public Key:</div>
+                <code class="break-all text-center nx-border-black nx-border-opacity-[0.04] nx-bg-opacity-[0.03] nx-bg-black nx-break-words nx-rounded-md nx-border nx-py-0.5 nx-px-[.25em] nx-text-[.85em] dark:nx-border-white/10 dark:nx-bg-white/10" dir="ltr">
+                  nHUzXFEQwBkqHWp71E23fY9QKvEGQqVncJfm8fPxn4bRBYQ3Eee3
+                </code>
+                <p class="text-xs mt-4"><a href="/.well-known/xahau.toml">View TOML</a></p>
+              </div>
+            </div>
+          </span>
+        </div>
+        <!--Right box-->
+        <div style="opacity: 1; transform: none;" class="box">
+          <span class="landing_counter-border__iOYlh w-[calc(100%_-_0px)] h-[304]px sm:!w-[488px] sm:h-[352px]" href="#">
+            <i aria-hidden="true" style="opacity:0"></i>
+            <div class="relative w-full h-full max-w-full !pb-12 pt-8 md:!pb-4 md:!pt-4 p-3 rounded-xl overflow-hidden flex flex-col items-center justify-center border border-[rgba(255,255,255,0.05)] turbopackCardBg">
+              <div class="flex items-center justify-center flex-1 mb-7 md:mb-0">
+                <div class="relative w-24 h-24">
+                  <div class="pointer-events-none absolute w-[261px] h-[261px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-[#4EBFFF] to-[#BD69FF] mix-blend-normal opacity-5 dark:opacity-[0.15] blur-[60px]"></div>
+                  <div class="contents dark:hidden">
+                    <img alt="Connect Icon" loading="lazy" width="120" height="120" decoding="async" data-nimg="1" class="absolute w-[84px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="color:transparent" src="./res/img/nodes-dark.svg">
+                  </div>
+                  <div class="dark:contents hidden">
+                    <img alt="Connect Logo" loading="lazy" width="120" height="120" decoding="async" data-nimg="1" class="hidden dark:block absolute w-[84px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="color:transparent" src="./res/img/nodes.svg"></div>
+                </div>
+                </div>
+                <div class="flex flex-col items-center flex-1">
+                  <div class="absolute top-3 left-3">
+                    <div class="font-mono font-bold text-xs text-black/50 dark:text-white/50  px-[6px] py-[3.25px] tracking-[-0.01em] rounded-[6px] uppercase flex justify-center items-center bg-black/5 dark:bg-white/[0.15] border border-black/[0.1] dark:border-white/[0.1]">Resources</div>
+                  </div>
+                  <p class="text-md !w-[280px] md:!w-[340px] font-space-grotesk text-center">
+                    <button class="mb-2 w-full min-w-[120px] text-base font-medium no-underline border dark:border-neutral-400 dark:text-neutral-200 dark:hover:border-white dark:hover:text-white border-[#EAEAEA] text-neutral-800 hover:border-black hover:text-black rounded md:leading-6 transition-all duration-300 ">
+                      <a class="block py-0" href="https://xahau.network" rel="noreferrer" target="_blank">XAHAU.network</a>
+                    </button>
+                    <button class="mb-2 w-full min-w-[120px] text-base font-medium no-underline border dark:border-neutral-400 dark:text-neutral-200 dark:hover:border-white dark:hover:text-white border-[#EAEAEA] text-neutral-800 hover:border-black hover:text-black rounded md:leading-6 transition-all duration-300 ">
+                      <a class="block py-0" href="https://docs.xahau.network/" rel="noreferrer" target="_blank">Docs</a>
+                    </button>
+                    <button class="mb-2 w-full min-w-[120px] text-base font-medium no-underline border dark:border-neutral-400 dark:text-neutral-200 dark:hover:border-white dark:hover:text-white border-[#EAEAEA] text-neutral-800 hover:border-black hover:text-black rounded md:leading-6 transition-all duration-300 ">
+                      <a class="block py-0" href="https://explorer.xahau.network/" rel="noreferrer" target="_blank">Explorer (XRPLF)</a>
+                    </button>
+                    <button class="mb-2 w-full min-w-[120px] text-base font-medium no-underline border dark:border-neutral-400 dark:text-neutral-200 dark:hover:border-white dark:hover:text-white border-[#EAEAEA] text-neutral-800 hover:border-black hover:text-black rounded md:leading-6 transition-all duration-300 ">
+                      <a class="block py-0" href="https://xahauexplorer.com" rel="noreferrer" target="_blank">Explorer (Bithomp)</a>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </span>
+        </div>
+      </div>
+        
+      <div class="z-10 py-16" style="transform:translateY(24px) translateZ(0)">
+        <!--<div class="mx-auto">
+          <p class="bg-contain mb-2 md:!mb-4 text-sm font-semibold tracking-wide text-center text-[#666666] dark:text-[#888888] uppercase">
+            Companies and individuals <br class="inline md:hidden">
+          </p>
+          <div class="z-50 grid grid-flow-col grid-rows-6 sm:grid-rows-3 md:grid-rows-2 lg:grid-rows-1">
+            <div class="w-48 lg:w-40 flex items-center justify-center flex">
+              <img alt="Logo" fetchpriority="high" width="150" height="75" decoding="async" data-nimg="1" class="mx-8 inline" style="color: transparent; width: 150px; height: 75px;" src="./res/img/logos/1.svg">
+            </div>
+            <div class="w-48 lg:w-40 flex items-center justify-center flex">
+              <img alt="Logo" fetchpriority="high" width="75" height="75" decoding="async" data-nimg="1" class="mx-8  inline" style="color: transparent; width: 75px; height: 75px;" src="/images/logos/color/2.svg">
+            </div>
+            <div class="w-48 lg:w-40 flex items-center justify-center flex">
+              <img alt="Logo" fetchpriority="high" width="125" height="75" decoding="async" data-nimg="1" class="mx-8 inline" style="color: transparent; width: 125px; height: 75px;" src="./res/img/logos/3.svg">
+            </div>
+          </div>
+        </div>-->
+      </div>
+
+
+
+</main></div></div>
+
+
+
+      <footer class="bg-[#FAFAFA] pb-[env(safe-area-inset-bottom)] relative dark:bg-[#111111]">
+        
+        <!--<div class="absolute top-0 h-12 w-full -translate-y-full bg-gradient-to-t from-[#FAFAFA] to-transparent dark:from-black pointer-events-none"></div>-->
+        
+        <div class="mx-auto max-w-[90rem] py-2 px-4 flex gap-2 flex">
+          <button title="Change theme" class="nx-h-7 nx-rounded-md nx-px-2 nx-text-left nx-text-xs nx-font-medium nx-text-gray-600 nx-transition-colors dark:nx-text-gray-400 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50" id="headlessui-listbox-button-:R15l6:" type="button" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="">
+            <div class="nx-flex nx-items-center nx-gap-2 nx-capitalize">
+              <svg fill="none" viewBox="2 2 20 20" width="12" height="12" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="currentColor" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+              <span class="">Dark</span>
+            </div>
+          </button>
+        </div>
+        
+        <hr class="dark:border-neutral-800">
+        
+        <div class="mx-auto max-w-[90rem] py-12 flex justify-center md:justify-center text-black dark:text-white pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">
+          <div aria-labelledby="footer-heading" class="w-full">
+            <h2 class="sr-only" id="footer-heading">Footer</h2>
+            <div class="w-full py-8 mx-auto">
+              <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="grid grid-cols-1 gap-8 xl:col-span-2">
+                  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 md:gap-8">
+                    <div class="mt-12 md:!mt-0">
+
+
+                      <h3 class="text-sm text-black dark:text-white">XAHAU</h3>
+                      <ul class="mt-4 space-y-1.5 list-none ml-0" role="list">
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://xahau.network">XAHAU.network</a></li>
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://github.com/Xahau">Xahau Repos</a></li>
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://docs.xahau.network/">Xahau Docs</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-12 md:!mt-0">
+                      <h3 class="text-sm text-black dark:text-white">Hooks</h3>
+                      <ul class="mt-4 space-y-1.5 list-none ml-0" role="list">
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://xrpl-hooks.readme.io">Hooks Docs</a></li>
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://hooks-builder.xrpl.org">Hooks Builder</a></li>
+                      </ul>
+                    </div>
+                    <!--<div class="mt-12 md:!mt-0"><h3 class="text-sm text-black dark:text-white">Legal</h3>
+                      <ul class="mt-4 space-y-1.5 list-none ml-0" role="list">
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="/privacy">Privacy Policy</a></li>
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="/terms">Terms of Service</a></li>
+                      </ul>
+                    </div>-->
+                    <div class="mt-12 md:!mt-0">
+                      <h3 class="text-sm text-black dark:text-white">Xahau Dev Table</h3>
+                      <ul class="mt-4 space-y-1.5 list-none ml-0" role="list">
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://github.com/xahaudevtable">GitHub</a></li>
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href="https://x.com/xahaudevtable">X / Twitter</a></li>
+                        <li><a class="text-sm text-[#666666] dark:text-[#888888] no-underline betterhover:hover:text-gray-700 betterhover:hover:dark:text-white transition" href='mailto&#58;%7&#56;a&#104;a%7&#53;de%7&#54;t%61%62l&#101;%40%6&#55;ma&#105;%6C&#46;%63%6F&#109;'>Email us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-12 xl:!mt-0">
+                  <!--<h3 class="text-sm text-black dark:text-white">Subscribe to our newsletter</h3>
+                  <p class="mt-4 text-sm text-gray-600 dark:text-[#888888]">Subscribe to the Turbo newsletter and stay updated on new releases and features, guides, and case studies.</p>
+                  <form class="mt-4 sm:flex sm:max-w-md">
+                    <label class="sr-only" for="email-address">Email address</label>
+                    <input autocomplete="email" class="border-[#666666] dark:border-[#888888] w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white border rounded-md appearance-none dark:text-white sm:text-sm dark:bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:border-white focus:placeholder-gray-400" id="email-address" name="email-address" placeholder="you@example.com" required="" type="email" value=""><div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                      <button class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-black border border-transparent rounded-md dark:bg-white dark:text-black sm:text-sm betterhover:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:ring-white dark:betterhover:hover:bg-gray-300" type="submit">Subscribe</button>
+                    </div>
+                  </form>-->
+                </div>
+              </div>
+              <div class="pt-8 mt-8 sm:flex sm:items-center sm:justify-between">
+                <div>
+                  <a class="text-current" href="#" rel="noopener noreferrer" title="xahaudevtable.com">
+                    <img src="./res/img/xdt.png" height="20" style="height:20px"/>
+                  </a>
+                  <p class="mt-4 text-xs text-gray-500 dark:text-[#888888]">© <!-- -->2023<!-- --> Xahau Dev Table. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./res/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script src="./res/js.js"></script>
+    <script src="./res/animation.js?v2"></script>
+  </body>
+</html>
